@@ -61,6 +61,8 @@
     }
   </style>
   <link rel="stylesheet" href="./assets/styles/vendor/tabsvertical.css">
+  <link rel="stylesheet" href="./assets/styles/vendor/tabhorizontal.css">
+  <link rel="stylesheet" href="./assets/styles/vendor/profilecard.css">
 </head>
 
 <body class="app">
@@ -106,15 +108,14 @@
               <a class="sidebar-link td-n" href="index.html">
                 <div class="peers ai-c fxw-nw">
                   <div class="peer">
-                    <div class="logo d-flex justify-content-center items-content-center"
-                      style="height: 40px !important;">
-                      <img src="./assets/static/images/logo-pertamina.png" class="py-auto" width="50" height="40"
-                        alt="">
+                    <div class="logo"
+                      style="width: 70px; height: 40px; display: flex; justify-content: center; align-items: center;">
+                      <img src="./assets/static/images/logo-pertamina.png" class="my-3" width="50" height="40" alt="">
                     </div>
                   </div>
                   <div class="peer peer-greed">
                     <h5 class="lh-1 mB-0 logo-text">PERTAMINA</h5>
-                    <h6 class="lh-1 mB-0 logo-text">PATRA NIAGA</h6>
+                    <p class="lh-1 mB-0 logo-text" style="color: red; font-size: 12px;">PATRA NIAGA</p>
                   </div>
                 </div>
               </a>
@@ -297,96 +298,144 @@
       </div>
 
       <!-- ### $App Screen Content ### -->
-      <main class='main-content bgc-white-100'>
+      <main class='main-content bg-white-100'>
         <div id='mainContent'>
-          <div class="full-container">
-            <div class="profileCard">
-              <p>profile</p>
+          <div class="profileCard">
+            <div class="iconProfile">
+              <i class="fa-solid fa-user-tie" style="font-size: 7rem;"></i>
             </div>
+            <div class="ms-3">
+              <p class="">Sabianca Sapphire Girsang</p>
+            </div>
+          </div>
 
-            <div id="containerTab">
-              <div id="backgoundTab"></div>
-              <div id="menu_tab">
-                <div id="tab_topbg"></div>
-                <div id="tab_bottombg"></div>
-                <div id="menu">
-                  <li data-tab="home">
-                    <i class="fa-solid fa-stethoscope"></i> Asasmen
-                  </li>
-                  <li data-tab="blog">
-                    <i class="fa-solid fa-basket-shopping"></i> Diagnosa
-                  </li>
-                  <li data-tab="contact">
-                    <i class="fa-regular fa-clipboard"></i> Consent
-                  </li>
-                  <li data-tab="code">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-                      <rect width="24" height="24" fill="none" />
-                      <path fill="currentColor"
-                        d="M8.624 2.758L7.125 4.257L5.384 2.515l1.448-1.448L5.765-.001L0 5.764l1.067 1.067l1.448-1.448l1.742 1.742l-1.499 1.499l12.96 12.96l5.399.124l2.289 2.289l1.054-.114l-2.758-2.758l-.124-5.399zm0 1.708l6.584 6.584l-4.148 4.148l-1.676-1.674l2.08-2.08l-.88-.88l-2.08 2.08l-1.55-1.55l2.08-2.08l-.88-.88l-2.08 2.08L4.48 8.62z" />
-                    </svg> Tindakan
-                  </li>
-                  <li data-tab="profile">
-                    <i class="fa-solid fa-pills"></i> Resep
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-flask"></i>
-                    Pem penunjang
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-hospital"></i>
-                    Rujuk Rs
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-envelope-open-text"></i>
-                    Surat keterangan
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-clipboard"></i>
-                    Catatan
-                  </li>
-                  <li>
-                    <i class="fa-regular fa-clipboard"></i>
-                    Resume
-                  </li>
+          <div id="containerTab">
+            <div id="backgoundTab"></div>
+            <div id="menu_tab">
+              <div id="tab_topbg"></div>
+              <div id="tab_bottombg"></div>
+              <div id="menu">
+                <li data-tab="home">
+                  <i class="fa-solid fa-stethoscope"></i> Asasmen
+                </li>
+                <li data-tab="blog">
+                  <i class="fa-solid fa-basket-shopping"></i> Diagnosa
+                </li>
+                <li data-tab="contact">
+                  <i class="fa-regular fa-clipboard"></i> Consent
+                </li>
+                <li data-tab="code">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <rect width="24" height="24" fill="none" />
+                    <path fill="currentColor"
+                      d="M8.624 2.758L7.125 4.257L5.384 2.515l1.448-1.448L5.765-.001L0 5.764l1.067 1.067l1.448-1.448l1.742 1.742l-1.499 1.499l12.96 12.96l5.399.124l2.289 2.289l1.054-.114l-2.758-2.758l-.124-5.399zm0 1.708l6.584 6.584l-4.148 4.148l-1.676-1.674l2.08-2.08l-.88-.88l-2.08 2.08l-1.55-1.55l2.08-2.08l-.88-.88l-2.08 2.08L4.48 8.62z" />
+                  </svg> Tindakan
+                </li>
+                <li data-tab="profile">
+                  <i class="fa-solid fa-pills"></i> Resep
+                </li>
+                <li>
+                  <i class="fa-solid fa-flask"></i>
+                  Pem penunjang
+                </li>
+                <li>
+                  <i class="fa-solid fa-hospital"></i>
+                  Rujuk Rs
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  Surat keterangan
+                </li>
+                <li>
+                  <i class="fa-solid fa-clipboard"></i>
+                  Catatan
+                </li>
+                <li>
+                  <i class="fa-regular fa-clipboard"></i>
+                  Resume
+                </li>
+              </div>
+            </div>
+            <div id="content">
+              <div id="tab-home" class="tab-content active">
+                <div class="tab-buttons">
+                  <button class="tab-button active-tab-button" onclick="toggleTab(0)">Anamnesa</button>
+                  <button class="tab-button" onclick="toggleTab(1)">Psikologis, Ekonomi, Sosial, Spiritual</button>
+                  <button class="tab-button" onclick="toggleTab(2)">Asessment</button>
+                  <button class="tab-button" onclick="toggleTab(3)">Asessment</button>
+                </div>
+                <div class="tab" id="tab1">
+                  <p>A. Keluhan Utama (SOAP)</p>
+                  <form class="d-flex">
+                    <div class="me-3">
+                      <div class="mb-3">
+                        <label class="form-label" for="exampleInputEmail1">Subjectif (s)</label>
+                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                          aria-describedby="emailHelp"></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="exampleInputEmail1">Objectif (o)</label>
+                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                          aria-describedby="emailHelp"></textarea>
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="mb-3">
+                        <label class="form-label" for="exampleInputEmail1">Asesmen (a)</label>
+                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                          aria-describedby="emailHelp"></textarea>
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label" for="exampleInputEmail1">Perencanaan (p)</label>
+                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                          aria-describedby="emailHelp"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab" id="tab2">
+                  <h2>Tab 2 Content</h2>
+                  <p>Description for Tab 2 goes here.</p>
+                </div>
+                <div class="tab" id="tab3">
+                  <h2>Tab 3 Content</h2>
+                  <p>Description for Tab 3 goes here.</p>
+                </div>
+                <div class="tab" id="tab4">
+                  <h2>Tab 4 Content</h2>
+                  <p>Description for Tab 3 goes here.</p>
                 </div>
               </div>
-              <div id="content">
-                <div id="tab-home" class="tab-content active">
-                  <span>Asasmen</span>
-                  <p>Welcome to the home page!</p>
-                </div>
-                <div id="tab-blog" class="tab-content">
-                  <span>Diagnosa</span>
-                  <p>Here is the blog content.</p>
-                </div>
-                <div id="tab-contact" class="tab-content">
-                  <span>Consent</span>
-                  <p>Contact us at example@example.com.</p>
-                </div>
-                <div id="tab-code" class="tab-content">
-                  <span>Tindakan</span>
-                  <p>Explore the latest coding tutorials.</p>
-                </div>
-                <div id="tab-profile" class="tab-content">
-                  <span>Resep</span>
-                  <p>This is your user profile.</p>
-                </div>
+              <div id="tab-blog" class="tab-content">
+                <span>Diagnosa</span>
+                <p>Here is the blog content.</p>
+              </div>
+              <div id="tab-contact" class="tab-content">
+                <span>Consent</span>
+                <p>Contact us at example@example.com.</p>
+              </div>
+              <div id="tab-code" class="tab-content">
+                <span>Tindakan</span>
+                <p>Explore the latest coding tutorials.</p>
+              </div>
+              <div id="tab-profile" class="tab-content">
+                <span>Resep</span>
+                <p>This is your user profile.</p>
               </div>
             </div>
           </div>
         </div>
       </main>
-
+      <!-- ### $App Screen Footer ### -->
+      <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600">
+        <span>Copyright © 2024 Designed by <a href="https://colorlib.com" target="_blank"
+            rel="nofollow noopener noreferrer" title="Colorlib">Colorlib</a>. All rights reserved.</span>
+      </footer>
     </div>
-    <!-- ### $App Screen Footer ### -->
-    <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600 fixed bottom-0">
-      <span>Copyright © 2024 Designed by <a href="https://colorlib.com" target="_blank"
-          rel="nofollow noopener noreferrer" title="Colorlib">Colorlib</a>. All rights reserved.</span>
-    </footer>
   </div>
 
   <script src="./assets/scripts/tabsvertical.js"></script>
+  <script src="./assets/scripts/tabshorizontal.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
     integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="

@@ -304,8 +304,60 @@
             <div class="iconProfile">
               <i class="fa-solid fa-user-tie" style="font-size: 7rem;"></i>
             </div>
-            <div class="ms-3">
-              <p class="">Sabianca Sapphire Girsang</p>
+            <div class="nameProfile ms-3">
+              <div class="d-flex justify-content-between border-bottom">
+                <div class="d-flex align-items-center">
+                  <p class="fs-3 m-0">Sabianca Sapphire Girsang <span class="fs-5">( 7 Tahun 6 Bulan | 2017-04-01
+                      )</span></p>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-outline-primary">Riwayat pasien</button>
+                  <button type="button" class="btn btn-outline-danger">Batalkan pasien</button>
+                  <button type="button" class="btn btn-warning">Rujuk IGD</button>
+                  <button type="button" class="btn btn-success">Pemeriksaan selesai</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="info">
+                    <span class="label">No RM</span><span>:</span><span class="value">320746708</span>
+                  </div>
+                  <div class="info">
+                    <span class="label">Tgl.Reg</span><span>:</span><span class="value">2024-10-15</span>
+                  </div>
+                  <div class="info">
+                    <span class="label">Waktu</span><span>:</span><span class="value">10:22</span>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="info">
+                    <span class="label">No. Telepon</span><span>:</span><span class="value">0811809605</span>
+                  </div>
+                  <div class="info">
+                    <span class="label">Email</span><span>:</span><span class="value"
+                      style="word-break: break-word !important;">ADRIAN.BONARUI@PERTAMINA.COM</span>
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <div class="info">
+                    <span class="label">BB (Kg)</span><span>:</span><span></span>
+                  </div>
+                  <div class="info">
+                    <span class="label">TB (cm)</span><span>:</span><span></span>
+                  </div>
+                  <div class="info">
+                    <span class="label">Gol.Darah</span><span>:</span><span></span>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="info">
+                    <span class="label">Dokter</span><span>:</span><span class="value">Namira, M.Psi., Psikolog</span>
+                  </div>
+                  <div class="info">
+                    <span class="label">Poli</span><span>:</span><span class="value">Psikology Medical Medan</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -362,48 +414,604 @@
                   <button class="tab-button active-tab-button" onclick="toggleTab(0)">Anamnesa</button>
                   <button class="tab-button" onclick="toggleTab(1)">Psikologis, Ekonomi, Sosial, Spiritual</button>
                   <button class="tab-button" onclick="toggleTab(2)">Asessment</button>
-                  <button class="tab-button" onclick="toggleTab(3)">Asessment</button>
+                  <button class="tab-button" onclick="toggleTab(3)">Simptom</button>
                 </div>
                 <div class="tab" id="tab1">
                   <p>A. Keluhan Utama (SOAP)</p>
-                  <form class="d-flex">
-                    <div class="me-3">
+                  <form class="row">
+                    <div class="col">
                       <div class="mb-3">
                         <label class="form-label" for="exampleInputEmail1">Subjectif (s)</label>
-                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                        <textarea type="email" class="form-control " style="height: 2rem;" id="exampleInputEmail1"
                           aria-describedby="emailHelp"></textarea>
                       </div>
                       <div class="mb-3">
                         <label class="form-label" for="exampleInputEmail1">Objectif (o)</label>
-                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                        <textarea type="email" class="form-control " style="height: 2rem;" id="exampleInputEmail1"
                           aria-describedby="emailHelp"></textarea>
                       </div>
                     </div>
-                    <div class="">
+                    <div class="col">
                       <div class="mb-3">
                         <label class="form-label" for="exampleInputEmail1">Asesmen (a)</label>
-                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                        <textarea type="email" class="form-control " style="height: 2rem;" id="exampleInputEmail1"
                           aria-describedby="emailHelp"></textarea>
                       </div>
                       <div class="mb-3">
                         <label class="form-label" for="exampleInputEmail1">Perencanaan (p)</label>
-                        <textarea type="email" class="form-control " style="width: 20rem;" id="exampleInputEmail1"
+                        <textarea type="email" class="form-control " style="height: 2rem;" id="exampleInputEmail1"
                           aria-describedby="emailHelp"></textarea>
                       </div>
                     </div>
                   </form>
+                  <div class="">
+                    <p>B. Riwayat Penyakit</p>
+                    <div class="mb-3 col-md-6">
+                      <label class="form-label" for="exampleInputEmail1">Riwayat Penyakit</label>
+                      <textarea type="email" class="form-control " style="height: 2rem;" id="exampleInputEmail1"
+                        aria-describedby="emailHelp"></textarea>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                        <button class="btn btn-outline-danger" type="button" id="button-addon2"><i
+                            class="fa-solid fa-trash"></i></button>
+                      </div>
+                      <button class="btn btn-primary text-white"><i class="fa-solid fa-plus"></i> Riwayat
+                        Penyakit</button>
+                    </div>
+                  </div>
+                  <div>
+                    <p>C. Riwayat Alergi</p>
+                    <div class="row">
+                      <div class="col">
+                        <div class="mb-1">
+                          <p>Alergi 1</p>
+                          <select class="form-select mb-2" aria-label="Disabled select example" disabled>
+                            <option selected>Obat</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                        <div class="mb-1">
+                          <p>Alergi 2</p>
+                          <select class="form-select mb-2" aria-label="Disabled select example" disabled>
+                            <option selected>Makanan</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="mb-1">
+                          <p>Alergi 3</p>
+                          <select class="form-select mb-2" aria-label="Disabled select example" disabled>
+                            <option selected>Udara</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                        <div class="mb-1">
+                          <p>Lainnya</p>
+                          <select class="form-select mb-2" aria-label="Disabled select example" disabled>
+                            <option selected>Lainnya</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>D. Riwayat Pengobatan</p>
+                    <div class="mb-3 col-md-6">
+                      <label class="form-label" for="exampleInputEmail1">Riwayat Terapi Obat</label>
+                      <textarea type="email" class="form-control " style="height: 2rem;" id="exampleInputEmail1"
+                        aria-describedby="emailHelp"></textarea>
+                    </div>
+                    <div class="mb-3 col-md-6">
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                        <button class="btn btn-outline-danger" type="button" id="button-addon2"><i
+                            class="fa-solid fa-trash"></i></button>
+                      </div>
+                      <button class="btn btn-primary text-white"><i class="fa-solid fa-plus"></i> Obat</button>
+                    </div>
+                  </div>
                 </div>
                 <div class="tab" id="tab2">
-                  <h2>Tab 2 Content</h2>
-                  <p>Description for Tab 2 goes here.</p>
+                  <div>
+                    <div class="row row-cols-2">
+                      <div class="col-md-6">
+                        <div class="row">
+                          <p class="fw-bold">Psikologis</p>
+                        </div>
+                        <div class="row">
+                          <p>Status Psikologis</p>
+                        </div>
+                        <div class="row row-cols-4 ps-3 mb-3">
+                          <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Sedih
+                            </label>
+                          </div>
+                          <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Cemas
+                            </label>
+                          </div>
+                          <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Takut
+                            </label>
+                          </div>
+                          <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Marah
+                            </label>
+                          </div>
+                          <div class="form-check col-md-5">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Ingin mengakhiri hidup
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Lainnya</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="row">
+                          <p class="fw-bold">Ekonomi</p>
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Pendidikan</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Pekerjaan</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Lainnya</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row row-cols-2 mt-3">
+                      <div class="col-md-6">
+                        <div class="row">
+                          <p class="fw-bold">Sosial</p>
+                        </div>
+                        <div class="row">
+                          <p>Kerabat</p>
+                        </div>
+                        <div class="row row-cols-2 ps-3 mb-2">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Penanggung jawab
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Lainnya
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Hubungan</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Telepon</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Nama</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="row">
+                          <p class="fw-bold">Spiritual</p>
+                        </div>
+                        <div class="col">
+                          <label for="form-label" class="form-label">Agama</label>
+                          <input type="text" class="form-control" aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="tab" id="tab3">
-                  <h2>Tab 3 Content</h2>
-                  <p>Description for Tab 3 goes here.</p>
+                  <p class="fw-bold">Deskripsi Umum</p>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Penampilan Umum</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Penanggung jawab
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Lainnya
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Sikap Terhadap Pemeriksa</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Kooperatif
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Kurang Kooperatif
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Afek</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault3">
+                            Normal
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault3">
+                            Datar
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault3">
+                            Depresi
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Roman Muka</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault4">
+                            Murung
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault4">
+                            Wajar
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault4" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault4">
+                            Euphoria
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Proses Pikir</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault5">
+                            Realistik
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault5" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault5">
+                            Tidak Realistik
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Gangguan Persepsi</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault6">
+                            Halusinasi
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault6">
+                            Delusi
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault6" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault6">
+                            Tidak Ada
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <p class="fw-bold">Fungsi Psikologi</p>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Memori</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault7">
+                            +
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault7" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault7">
+                            -
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Konsentrasi</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault8">
+                            +
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault8" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault8">
+                            -
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Orientasi</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault9">
+                            +
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault9" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault9">
+                            -
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Kemampuan Verbal</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault10" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault10">
+                            +
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault10" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault10">
+                            -
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Emosi</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault11" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault11">
+                            Stabil
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault11" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault11">
+                            Tidak Stabil
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col-md-2 d-flex align-items-center justify-content-starts">
+                      <p class="m-0">Perilaku</p>
+                    </div>
+                    <div class="col-md-10">
+                      <div class="row row-cols-4 ps-3 mb-2">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault12">
+                            Ada Hambatan
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault12">
+                            Normal
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault12">
+                            Agresif
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault12" id="flexRadioDefault">
+                          <label class="form-check-label" for="flexRadioDefault12">
+                            Menarik Diri
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <input type="text" class="form-control" aria-label="Recipient's username"
+                          aria-describedby="button-addon2">
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="tab" id="tab4">
-                  <h2>Tab 4 Content</h2>
-                  <p>Description for Tab 3 goes here.</p>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="row row-cols-4 ps-3 mb-2">
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault11"
+                                id="flexRadioDefault">
+                              <label class="form-check-label" for="flexRadioDefault11">
+                                Stabil
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault11"
+                                id="flexRadioDefault">
+                              <label class="form-check-label" for="flexRadioDefault11">
+                                Tidak Stabil
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div id="tab-blog" class="tab-content">

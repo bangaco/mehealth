@@ -81,9 +81,15 @@
 
 #content {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
+  overflow-y: scroll;
   left: 20%;
+  scrollbar-width: none;
+}
+
+#content::-webkit-scrollbar {
+  display: none;
 }
 
 #content span {

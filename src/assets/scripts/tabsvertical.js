@@ -116,15 +116,41 @@ let tabContents = document.querySelectorAll(".tab-content");
 let tab_topbg = document.getElementById("tab_topbg");
 let tab_bottombg = document.getElementById("tab_bottombg");
 
+// Function to update tab background height
+function updateTabBackground(tabElement) {
+  let Top_height = tabElement.offsetTop;
+  let spacing = 42;
+
+  let Bottom_Height =
+    document.querySelector("#containerTab").offsetHeight -
+    Top_height -
+    spacing -
+    14;
+
+  tab_topbg.style.height = Top_height + "px";
+  tab_bottombg.style.height = Bottom_Height + "px";
+}
+
+// Initial load: set default tab active and adjust background
+function initializeDefaultTab() {
+  let defaultTab = menuItems[0]; // Atur tab pertama sebagai default
+  let defaultTabName = defaultTab.getAttribute("data-tab");
+
+  updateTabBackground(defaultTab); // Atur background sesuai tab default
+
+  let activeTabContent = document.getElementById("tab-" + defaultTabName);
+  if (activeTabContent) {
+    activeTabContent.classList.add("active");
+  }
+}
+
+// Event listener for tab click
 menuItems.forEach((item) => {
   item.addEventListener("click", (e) => {
     let tabName = e.target.getAttribute("data-tab");
 
-    // Update top and bottom background heights
-    let Top_height = e.target.offsetTop;
-    let Bottom_Height = 514 - Top_height - 14;
-    tab_topbg.style.height = Top_height + "px";
-    tab_bottombg.style.height = Bottom_Height + "px";
+    // Update background height on click
+    updateTabBackground(e.target);
 
     // Hide all tab contents
     tabContents.forEach((content) => {
@@ -138,3 +164,6 @@ menuItems.forEach((item) => {
     }
   });
 });
+
+// Run initialization on page load
+initializeDefaultTab();

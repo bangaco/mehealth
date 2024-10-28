@@ -1,107 +1,91 @@
+<!--Template Name: portal-login-form 
+File Name: index.html
+Author Name: ThemeVault
+Author URI: http://www.themevault.net/
+Licence URI: http://www.themevault.net/license/
+-->
+
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sign In</title>
-    <style>
-      #loader {
-        transition: all 0.3s ease-in-out;
-        opacity: 1;
-        visibility: visible;
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        background: #fff;
-        z-index: 90000;
-      }
-
-      #loader.fadeOut {
-        opacity: 0;
-        visibility: hidden;
-      }
-
-      .spinner {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: calc(50% - 20px);
-        left: calc(50% - 20px);
-        background-color: #333;
-        border-radius: 100%;
-        -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
-        animation: sk-scaleout 1.0s infinite ease-in-out;
-      }
-
-      @-webkit-keyframes sk-scaleout {
-        0% { -webkit-transform: scale(0) }
-        100% {
-          -webkit-transform: scale(1.0);
-          opacity: 0;
-        }
-      }
-
-      @keyframes sk-scaleout {
-        0% {
-          -webkit-transform: scale(0);
-          transform: scale(0);
-        } 100% {
-          -webkit-transform: scale(1.0);
-          transform: scale(1.0);
-          opacity: 0;
-        }
-      }
-    </style>
-  </head>
-  <body class="app">
-    <div id='loader'>
-      <div class="spinner"></div>
-    </div>
-
-    <script>
-      window.addEventListener('load', function load() {
-        const loader = document.getElementById('loader');
-        setTimeout(function() {
-          loader.classList.add('fadeOut');
-        }, 300);
-      });
-    </script>
-    <div class="peers ai-s fxw-nw h-100vh">
-      <div class="d-n@sm- peer peer-greed h-100 pos-r bgr-n bgpX-c bgpY-c bgsz-cv" style='background-image: url("assets/static/images/bg.jpg")'>
-        <div class="pos-a centerXY">
-          <div class="bgc-white bdrs-50p pos-r" style='width: 120px; height: 120px;'>
-            <img class="pos-a centerXY" src="assets/static/images/logo.png" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-4 peer pX-40 pY-80 h-100 bgc-white scrollable pos-r" style='min-width: 320px;'>
-        <h4 class="fw-300 c-grey-900 mB-40">Login</h4>
-        <form>
-          <div class="mb-3">
-            <label class="text-normal text-dark form-label">Username</label>
-            <input type="email" class="form-control" placeholder="John Doe">
-          </div>
-          <div class="mb-3">
-            <label class="text-normal text-dark form-label">Password</label>
-            <input type="password" class="form-control" placeholder="Password">
-          </div>
-          <div class="">
-            <div class="peers ai-c jc-sb fxw-nw">
-              <div class="peer">
-                <div class="checkbox checkbox-circle checkbox-info peers ai-c">
-                  <input type="checkbox" id="inputCall1" name="inputCheckboxesCall" class="peer">
-                  <label for="inputCall1" class=" peers peer-greed js-sb ai-c form-label">
-                    <span class="peer peer-greed">Remember Me</span>
-                  </label>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image Slider Login Form</title>
+        <link rel="icon" href="images/favicon.png"/>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <!-- Custom styles for this template -->
+        <link href="/src/assets/styles/css/sigin.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <form class="login-form">
+                    <span class="form-title">LOG IN</span>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <div class="input-group">
+                            <span class="fa fa-envelope" aria-hidden="true"></span>
+                            <input type="email" name="email" class="form-control" placeholder="joe@email.com" required />
+                        </div>
+                    </div>    
+                    <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-group">
+                            <span class="fa fa-lock" aria-hidden="true"></span>
+                            <input type="password" name="password" class="form-control" placeholder="Enter your Password" required>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="remember" id="rememberMe">
+                        <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn btn-primary btn-block btn-lg" value="Login">
+                        <span class="forgot-link"><a href="">forgot password?</a></span>
+                    </div>
+                    <p>Don't have an account? <a href="">Register here</a>.</p>
+                </form>
+                <div class="login-left">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="images/1.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
-              </div>
-              <div class="peer">
-                <button class="btn btn-primary btn-color">Login</button>
-              </div>
             </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
+            <div class="copyright">
+                <!--                    Do not remove Backlink from footer of the template. To remove it you can purchase the Backlink !-->
+                &copy; 2020 All right reserved. Designed by <a href="http://www.themevault.net/" target="_blank"><strong>ThemeVault.</strong></a>
+            </div>
+        </div>
+        <script>$('.carousel').carousel();</script>
+    </body>
 </html>

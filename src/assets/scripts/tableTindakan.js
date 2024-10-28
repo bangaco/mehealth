@@ -19,12 +19,12 @@ let rowsTindakan = "";
 dataTindakan.forEach((item) => {
   rowsTindakan += `
           <tr>
-              <td>${item.id}</td>
-              <td>${item.diagnosa}</td>
-              <td>${item.tindakan}</td>
-              <td>${item.tanggal}</td>
-              <td>${item.jammulaiselesai}</td>
-              <td>${item.catatan}</td>
+              <td><div class="d-flex justify-content-center"><p class="m-0">${item.id}</p></div></td>
+              <td><div class="d-flex justify-content-center"><p class="m-0">${item.diagnosa}</p></div></td>
+              <td><div class="d-flex justify-content-center"><p class="m-0">${item.tindakan}</p></div></td>
+              <td><div class="d-flex justify-content-center"><p class="m-0">${item.tanggal}</p></div></td>
+              <td><div class="d-flex justify-content-center"><p class="m-0">${item.jammulaiselesai}</p></div></td>
+              <td><div class="d-flex justify-content-center"><p class="m-0">${item.catatan}</p></div></td>
               <td>
               <div class="d-flex justify-content-center align-items-center">
               <button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>

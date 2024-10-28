@@ -5,7 +5,7 @@ const dataResep = [
     nomor: "RSO-028/PND4D0000/MDN/10/2024-S8",
     farmasi: "Depo Obat Medical Medan",
     catatan: "(not set)",
-    status: "released",
+    status: "Released",
   },
 ];
 
@@ -23,13 +23,20 @@ dataResep.forEach((item) => {
                   <td>${item.tanggal}</td>
                   <td>${item.nomor}</td>
                   <td>${item.farmasi}</td>
-                  <td>${item.catatan}</td>
-                  <td><p class="bg-success rounded-pill p-2 text-center">${item.status}</p></td>
+                  <td><p class="text-danger">${item.catatan}</p></td>
+                  <td><p class="bg-success rounded-pill p-2 text-center text-white">${item.status}</p></td>
                   <td>
-                  <div class="d-flex justify-content-center align-items-center">
-                  <button class="btn btn-outline-secondary"><i class="fa-solid fa-up-right-from-square"></i></button>
-                  <button class="btn btn-outline-primary"><i class="fa-solid fa-pencil"></i></button>
-                  <button class="btn btn-primary text-white"><i class="fa-solid fa-print"></i></button>
+                   <div class="d-flex justify-content-center">
+                    <div class="btn-group">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Detail</a></li>
+                    <li><a class="dropdown-item" href="#">Edit</a></li>
+                    <li><a class="dropdown-item" href="#">Print Out</a></li>
+                    </ul>
+                    </div>
                   </div>
                   </td>
               </tr>

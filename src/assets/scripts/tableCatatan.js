@@ -20,10 +20,17 @@ dataCatatan.forEach((item) => {
                         <td>${item.tglKunjungan}</td>
                         <td>${item.keperluanIstirahat}</td>
                         <td>
-                        <div class="d-flex justify-content-center align-items-center">
-                        <button class="btn btn-outline-secondary"><i class="fa-solid fa-up-right-from-square"></i></button>
-                        <button class="btn btn-outline-primary"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+                        <div class="d-flex justify-content-center">
+                        <div class="btn-group">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                         <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="#">Detail</a></li>
+                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                          </ul>
+                        </div>
                         </div>
                         </td>
                     </tr>

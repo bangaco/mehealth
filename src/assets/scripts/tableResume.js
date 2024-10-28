@@ -22,12 +22,19 @@ dataResume.forEach((item) => {
                     <td>${item.tglRilis}</td>
                     <td>${item.tglWaktuKejadian}</td>
                     <td>${item.dokterPemeriksa}</td>
-                    <td><p class="bg-success rounded-pill p-2 text-center">${item.status}</p></td>
+                    <td><p class="bg-success rounded-pill p-2 text-center text-white">${item.status}</p></td>
                     <td>
-                    <div class="d-flex justify-content-center align-items-center">
-                    <button class="btn btn-outline-secondary"><i class="fa-solid fa-up-right-from-square"></i></button>
-                    <button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
-                    <button class="btn btn-primary text-white"><i class="fa-solid fa-print"></i></button>
+                    <div class="d-flex justify-content-center">
+                    <div class="btn-group">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Detail</a></li>
+                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                        <li><a class="dropdown-item" href="#">Print out</a></li>
+                      </ul>
+                    </div>
                     </div>
                     </td>
                 </tr>

@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
-const ctx = document.getElementById('myChart');
+const wanrujuk = document.getElementById('Chartrujuk');
 const ctc = document.getElementById('rujukan');
 
-new Chart(ctx, {
+new Chart(wanrujuk, {
   type: 'bar',
   data: {
     labels: ['Poli Gigi', 'Poli Psikology', 'Poli Umum'],

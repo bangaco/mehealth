@@ -16,31 +16,26 @@ body {
     color: #555555;
     font-weight: 300;
     background-color: white;
-    /*    height: 100%;
-        background: linear-gradient(90deg, #50a3a2 50%, #FFFFFF 50%);*/
+    overflow: hidden;
 }
 body ::-webkit-input-placeholder {
-    /* WebKit browsers */
     font-family: 'Lato', sans-serif;
     color: #555555;
     font-weight: 300;
 }
 body :-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
     font-family: 'Lato', sans-serif;
     color: #555555;
     opacity: 1;
     font-weight: 300;
 }
 body ::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
     font-family: 'Lato', sans-serif;
     color: #555555;
     opacity: 1;
     font-weight: 300;
 }
 body :-ms-input-placeholder {
-    /* Internet Explorer 10+ */
     font-family: 'Lato', sans-serif;
     color: #555555;
     font-weight: 300;
@@ -49,37 +44,39 @@ body :-ms-input-placeholder {
     position: relative;
     z-index: 2;
     width: 100%;
-    min-height: 750px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 0 10%;
-    padding-top:50px;
     background: rgb(106, 106, 106);
 }
 .container {
-    -webkit-box-shadow: 10px 0px 30px 5px rgba(0,0,0,0.27);
-    -moz-box-shadow: 10px 0px 30px 5px rgba(0,0,0,0.27);
-    box-shadow: 10px 0px 30px 5px rgba(0,0,0,0.27);
+    box-shadow: 10px 0px 30px 5px rgba(0, 0, 0, 0.27);
     background: #fff;
     overflow: hidden;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     flex-direction: row-reverse;
     padding: 0px;
-    width: 90%;
+    width: 80%;
     height: auto;
 }
+.logo-mehealth {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+.logo-sp{
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+    left: 20px;
+}
+
 .login-left {
     width: 50%;
     z-index: 1;
@@ -88,7 +85,7 @@ body :-ms-input-placeholder {
 }
 .login-left h2 {
     font-weight: 700;
-    font-size:34px;
+    font-size: 34px;
 }
 .login-left h3 {
     font-size: 1.2em;
@@ -110,13 +107,9 @@ body :-ms-input-placeholder {
 }
 .login-form {
     width: 50%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 30px; /* Kurangi padding */
 }
 .form-title {
     font-size: 25px;
@@ -141,11 +134,11 @@ body :-ms-input-placeholder {
 .form-group {
     width: 100%;
     display: block;
-    height:80px;
+    height: 80px;
 }
 .form-check {
     display: block;
-    width:100%
+    width: 100%;
 }
 .form-check label {
     width: auto;
@@ -186,9 +179,6 @@ button, input {
     text-align: center;
     vertical-align: middle;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
@@ -196,7 +186,7 @@ button, input {
     font-size: 1rem;
     line-height: 1.5;
     border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 .btn-primary {
     color: #fff;
@@ -236,7 +226,7 @@ input[type="button"].btn-block, input[type="reset"].btn-block, input[type="submi
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 .form-control::placeholder {
     color: #6c757d;
@@ -248,24 +238,10 @@ label {
     font-weight: 700;
     width: 100%;
 }
-input[type="email"] {
+input[type="email"], input[type="Password"] {
     font-size: 15px;
     color: #333;
     text-align: left;
-    letter-spacing: 1px;
-    padding: 14px 10px;
-    width: 93%;
-    display: inline-block;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    background: transparent;
-}
-input[type="Password"] {
-    font-size: 15px;
-    color: #333;
-    text-align: left;
-    text-transform: capitalize;
     letter-spacing: 1px;
     padding: 14px 10px;
     width: 93%;
@@ -284,12 +260,12 @@ input[type="Password"] {
 .carousel {
     height: 100%;
 }
-.copyright a{
+.copyright a {
     color: #50a3a2;
     font-size: 16px;
     text-decoration: none;
 }
-.copyright a:hover{
+.copyright a:hover {
     color: #000;
 }
 .copyright strong {
@@ -299,31 +275,31 @@ input[type="Password"] {
 /*-----Responsive------ */
 @media (max-width: 1280px) {
     .login-form {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 30px; /* Sesuaikan padding */
+        padding-right: 30px; /* Sesuaikan padding */
     }
     .login-left {
         height: 100%;
     }
     .container {
-        width: 100%;
+        width: 90%; /* Sesuaikan lebar card */
     }
 }
 @media (max-width: 992px) {
     .login-form {
         width: 100%;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 30px; /* Sesuaikan padding */
+        padding-right: 30px; /* Sesuaikan padding */
     }
     .login-left {
         display: none;
     }
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .login-form {
         width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px; /* Sesuaikan padding */
+        padding-right: 20px; /* Sesuaikan padding */
     }
     .login-left {
         display: none;
@@ -332,7 +308,7 @@ input[type="Password"] {
         width: 0%;
     }
     .wrapper {
-        padding:10px;
+        padding: 10px;
     }
     .copyright {
         padding-bottom: 30px;
@@ -340,8 +316,7 @@ input[type="Password"] {
 }
 @media (max-width: 360px) {
     .login-form {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 15px; /* Sesuaikan padding */
+        padding-right: 15px; /* Sesuaikan padding */
     }
-
 }

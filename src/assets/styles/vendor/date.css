@@ -1,0 +1,86 @@
+.date-picker {
+  position: relative;
+  width: 260px;
+  font-family: Arial, sans-serif;
+}
+
+.date-display {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #333;
+}
+
+.date-display span {
+  margin-right: 8px;
+}
+
+.calendar {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 1000;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.calendar-header span {
+  font-weight: bold;
+}
+
+.calendar-header button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.calendar-days div {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.calendar-days div:hover {
+  background-color: #f0f0f0;
+}
+
+.selected-range {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.highlighted {
+  background-color: #d0e4ff;
+}
+
+.reset-btn {
+  color: #007bff;
+  font-size: 0.9em;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 12px;
+}

@@ -20,3 +20,26 @@ window.onclick = function (event) {
     });
   }
 };
+
+function toggleDropdownFilter(menuId) {
+  // Menutup dropdown lain jika te-filterrbuka
+  const dropdowns = document.querySelectorAll(".dropdown-content-filter");
+  dropdowns.forEach((dropdown) => {
+    if (dropdown.id !== menuId) dropdown.style.display = "none";
+  });
+
+  // Tampilkan atau sembunyikan dropdown yang diklik
+  const dropdownMenu = document.getElementById(menuId);
+  dropdownMenu.style.display =
+    dropdownMenu.style.display === "block" ? "none" : "block";
+}
+
+// Menutup dropdown jika pengguna mengklik di luar dropdown
+window.onclick = function (event) {
+  if (!event.target.closest(".dropdown-container-filter")) {
+    const dropdowns = document.querySelectorAll(".dropdown-content-filter");
+    dropdowns.forEach((dropdown) => {
+      dropdown.style.display = "none";
+    });
+  }
+};
